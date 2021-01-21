@@ -28,4 +28,5 @@ window/size/fullscreen=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://misc/default_env.tres"
