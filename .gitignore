@@ -1,0 +1,13 @@
+
+# Gitignore
+# Ignores Specified Files
+# See https://git-scm.com/docs/gitignore for more information
+# Last Updated: 2020-12-19T20:17:00-05:00
+
+# Godot
+dsw-intel-games/*/.import/
+dsw-intel-games/*/export.cfg
+dsw-intel-games/*/export_presets.cfg
+
+# Windows
+desktop.ini

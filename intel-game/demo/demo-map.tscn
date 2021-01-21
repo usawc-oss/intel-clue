@@ -1,0 +1,416 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://demo/demo/map-2.png" type="Texture" id=1]
+[ext_resource path="res://misc/themes/default.tres" type="Theme" id=2]
+[ext_resource path="res://misc/fonts/default.tres" type="DynamicFont" id=3]
+[ext_resource path="res://demo/country-control.gd" type="Script" id=4]
+[ext_resource path="res://demo/exit-game.gd" type="Script" id=5]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 5, 150, 200, 300, 250, 300, 500, 250, 1200, 180, 1400, 300, 1400, 100, 1600, 200, 1700, 40, 800, -60 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 150, -80, 620, -120, 750, 0, 600, 30, 700, 150, 600, 250, 500, 230, 200, 150 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 400, -150, 400, 100, 100, 120 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 220, 10, 280, 180, 100, 180 )
+
+[node name="demo-map" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "The Game Map, with countries, spawn locations, and basic stats
+WARN demo use only WARN"
+}
+
+[node name="map-back" type="TextureRect" parent="."]
+margin_top = 85.0
+margin_right = 1926.0
+margin_bottom = 884.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="countries" type="Node2D" parent="."]
+
+[node name="russia-control" type="Control" parent="countries" groups=[
+"countries",
+]]
+margin_left = 45.0
+margin_top = 141.0
+margin_right = 1657.0
+margin_bottom = 394.0
+mouse_default_cursor_shape = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+exit_menu_path = NodePath("../../menus/exit-game")
+
+[node name="russia-label" type="Label" parent="countries/russia-control"]
+margin_left = 700.0
+margin_top = 94.0
+margin_right = 882.0
+margin_bottom = 162.0
+custom_fonts/font = ExtResource( 3 )
+text = "Russia"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="click-area" type="Area2D" parent="countries/russia-control"]
+position = Vector2( 704, 105 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collider" type="CollisionShape2D" parent="countries/russia-control/click-area"]
+position = Vector2( -754.205, -78.3855 )
+shape = SubResource( 1 )
+
+[node name="holders" type="Node2D" parent="countries/russia-control"]
+position = Vector2( 738, 115 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="holder-1" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( -632, 24 )
+
+[node name="holder-2" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( -436, 56 )
+
+[node name="holder-3" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( -212, -88 )
+
+[node name="holder-4" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( -252, 40 )
+
+[node name="holder-5" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( -68, 88 )
+
+[node name="holder-6" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( -68, -72 )
+
+[node name="holder-7" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 148, -72 )
+
+[node name="holder-8" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 164, 96 )
+
+[node name="holder-9" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 308, 96 )
+
+[node name="holder-10" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 324, -56 )
+
+[node name="holder-11" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 460, 72 )
+
+[node name="holder-12" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 484, -32 )
+
+[node name="holder-13" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 628, -32 )
+
+[node name="holder-14" type="Position2D" parent="countries/russia-control/holders"]
+position = Vector2( 628, -32 )
+
+[node name="sounds" type="AudioStreamPlayer" parent="countries/russia-control"]
+
+[node name="china-control" type="Control" parent="countries" groups=[
+"countries",
+]]
+margin_left = 731.0
+margin_top = 408.0
+margin_right = 1319.0
+margin_bottom = 698.0
+mouse_default_cursor_shape = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+exit_menu_path = NodePath("../../menus/exit-game")
+
+[node name="china-label" type="Label" parent="countries/china-control"]
+margin_left = 211.0
+margin_top = 117.0
+margin_right = 366.0
+margin_bottom = 185.0
+custom_fonts/font = ExtResource( 3 )
+text = "China"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="click-area" type="Area2D" parent="countries/china-control"]
+position = Vector2( -96, 77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collider" type="CollisionShape2D" parent="countries/china-control/click-area"]
+shape = SubResource( 2 )
+
+[node name="holders" type="Node2D" parent="countries/china-control"]
+position = Vector2( 308, 147 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="holder-1" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -337, -40 )
+
+[node name="holder-2" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -273, -104 )
+
+[node name="holder-3" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -265, 16 )
+
+[node name="holder-4" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -161, 48 )
+
+[node name="holder-5" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -161, -64 )
+
+[node name="holder-6" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -41, -64 )
+
+[node name="holder-7" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( 79, -72 )
+
+[node name="holder-8" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( -1, 80 )
+
+[node name="holder-9" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( 95, 120 )
+
+[node name="holder-10" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( 215, 128 )
+
+[node name="holder-11" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( 199, -112 )
+
+[node name="holder-12" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( 103, 24 )
+
+[node name="holder-13" type="Position2D" parent="countries/china-control/holders"]
+position = Vector2( 207, 16 )
+
+[node name="sounds" type="AudioStreamPlayer" parent="countries/china-control"]
+
+[node name="dprk-control" type="Control" parent="countries" groups=[
+"countries",
+]]
+margin_left = 1454.0
+margin_top = 575.0
+margin_right = 1803.0
+margin_bottom = 804.0
+mouse_default_cursor_shape = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+exit_menu_path = NodePath("../../menus/exit-game")
+
+[node name="dprk-label" type="Label" parent="countries/dprk-control"]
+margin_left = 62.0
+margin_top = 62.9999
+margin_right = 228.0
+margin_bottom = 131.0
+custom_fonts/font = ExtResource( 3 )
+text = "DPRK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="click-area" type="Area2D" parent="countries/dprk-control"]
+position = Vector2( 160, 136 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collider" type="CollisionShape2D" parent="countries/dprk-control/click-area"]
+position = Vector2( -221, -14 )
+shape = SubResource( 3 )
+
+[node name="holders" type="Node2D" parent="countries/dprk-control"]
+position = Vector2( 168, 104 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="holder-1" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( -157, 19 )
+
+[node name="holder-2" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( -69, 91 )
+
+[node name="holder-3" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 43, 91 )
+
+[node name="holder-4" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 139, 11 )
+
+[node name="holder-5" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 139, -85 )
+
+[node name="holder-6" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 51, -77 )
+
+[node name="holder-7" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( -101, -21 )
+
+[node name="holder-8" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( -221, 131 )
+
+[node name="holder-9" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 123, 163 )
+
+[node name="holder-10" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 227, 91 )
+
+[node name="holder-11" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 235, -29 )
+
+[node name="holder-12" type="Position2D" parent="countries/dprk-control/holders"]
+position = Vector2( 235, -29 )
+
+[node name="sounds" type="AudioStreamPlayer" parent="countries/dprk-control"]
+
+[node name="iran-control" type="Control" parent="countries" groups=[
+"countries",
+]]
+margin_left = 299.0
+margin_top = 525.0
+margin_right = 540.0
+margin_bottom = 669.0
+mouse_default_cursor_shape = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+exit_menu_path = NodePath("../../menus/exit-game")
+
+[node name="iran-label" type="Label" parent="countries/iran-control"]
+margin_left = 69.0
+margin_top = 22.0
+margin_right = 172.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 3 )
+text = "Iran"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="click-area" type="Area2D" parent="countries/iran-control"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collider" type="CollisionShape2D" parent="countries/iran-control/click-area"]
+position = Vector2( -37, -29 )
+shape = SubResource( 4 )
+
+[node name="holders" type="Node2D" parent="countries/iran-control"]
+position = Vector2( 112, 56 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="holder-1" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( -111, -55 )
+
+[node name="holder-2" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( -71, 17 )
+
+[node name="holder-3" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( -39, -47 )
+
+[node name="holder-4" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 41, -55 )
+
+[node name="holder-5" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 89, 1 )
+
+[node name="holder-6" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 1, 65 )
+
+[node name="holder-7" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 73, 89 )
+
+[node name="holder-8" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 121, 57 )
+
+[node name="holder-9" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 57, 33 )
+
+[node name="holder-10" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( -143, 1 )
+
+[node name="holder-11" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( -71, 97 )
+
+[node name="holder-12" type="Position2D" parent="countries/iran-control/holders"]
+position = Vector2( 137, 129 )
+
+[node name="sounds" type="AudioStreamPlayer" parent="countries/iran-control"]
+
+[node name="abilities" type="Node2D" parent="."]
+
+[node name="ability" type="Node2D" parent="abilities"]
+position = Vector2( 107, 1000 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Control" parent="abilities/ability"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pop-up" type="Control" parent="abilities/ability"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menus" type="Node2D" parent="."]
+
+[node name="exit-game" type="ConfirmationDialog" parent="menus"]
+margin_left = 800.0
+margin_top = 400.0
+margin_right = 1300.0
+margin_bottom = 579.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+window_title = ""
+dialog_text = "Exit Game?"
+script = ExtResource( 5 )
+[connection signal="mouse_entered" from="countries/russia-control" to="countries/russia-control" method="_on_hover"]
+[connection signal="mouse_exited" from="countries/russia-control" to="countries/russia-control" method="_on_leave"]
+[connection signal="mouse_entered" from="countries/china-control" to="countries/china-control" method="_on_hover"]
+[connection signal="mouse_exited" from="countries/china-control" to="countries/china-control" method="_on_leave"]
+[connection signal="mouse_entered" from="countries/dprk-control" to="countries/dprk-control" method="_on_hover"]
+[connection signal="mouse_exited" from="countries/dprk-control" to="countries/dprk-control" method="_on_leave"]
+[connection signal="mouse_entered" from="countries/iran-control" to="countries/iran-control" method="_on_hover"]
+[connection signal="mouse_exited" from="countries/iran-control" to="countries/iran-control" method="_on_leave"]
+[connection signal="confirmed" from="menus/exit-game" to="menus/exit-game" method="_on_ok"]

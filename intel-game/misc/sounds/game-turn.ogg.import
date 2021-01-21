@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/game-turn.ogg-a60ea443b127b588c849b20edc3efb50.oggstr"
+
+[deps]
+
+source_file="res://misc/sounds/game-turn.ogg"
+dest_files=[ "res://.import/game-turn.ogg-a60ea443b127b588c849b20edc3efb50.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

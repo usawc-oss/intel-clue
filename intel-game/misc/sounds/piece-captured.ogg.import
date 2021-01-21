@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/piece-captured.ogg-10f38555e6a12917c75b6341ffb40bd9.oggstr"
+
+[deps]
+
+source_file="res://misc/sounds/piece-captured.ogg"
+dest_files=[ "res://.import/piece-captured.ogg-10f38555e6a12917c75b6341ffb40bd9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

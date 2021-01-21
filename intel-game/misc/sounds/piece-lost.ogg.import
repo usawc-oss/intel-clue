@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/piece-lost.ogg-c996a5626bdb632bb9753754a6b7e6b8.oggstr"
+
+[deps]
+
+source_file="res://misc/sounds/piece-lost.ogg"
+dest_files=[ "res://.import/piece-lost.ogg-c996a5626bdb632bb9753754a6b7e6b8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

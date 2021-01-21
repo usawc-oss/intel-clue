@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="demo-player" type="Node"]
+__meta__ = {
+"_editor_description_": "An example player
+WARN demo use only WARN"
+}
