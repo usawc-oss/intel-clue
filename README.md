@@ -6,6 +6,11 @@
 # Department of Strategic Wargaming Intelligence Games
 
 
+## Notice
+- This is the `2021-01-21.playtest.ugly` branch!
+- Many unpleasant changes to the codebase are expected
+
+
 ## Brief
 - A small repository for any Intelligence Elective games at the *Army War College*
 - Since this repo is *private*, any notes are added to the `wiki/` directory, as opposed to the *wiki* tab
